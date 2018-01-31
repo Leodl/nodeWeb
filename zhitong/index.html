@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<script type="text/javascript" src="jquery.min.js"></script>
+</head>
+<body>
+
+
+
+	<script type="text/javascript">
+		$(function(){
+			 var token = "eyJhbGciOiJIUzI1NiJ9.eyJ1c2VySWQiOjEwMDMyMCwidXNlclR5cGUiOjEsInVzZXJOYW1lIjoi5aWV6aOeIn0.hF2PmlYju0Ofk6yp3P4alD_M4auKHEJQa3gaPv8OOIg"
+     $.ajax({
+        url:"/meritpay/roster/getDetail/100316",
+        //type:'post',
+       headers:{"User-Token":token},
+       contentType: 'application/json',
+       dataType: "json",
+        success:function(res){
+          console.log(res)
+        }
+
+     })
+		})
+	</script>
+
+</body>
+</html>
